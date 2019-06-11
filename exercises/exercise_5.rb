@@ -8,3 +8,6 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+puts "total revenue is #{Store.sum(:annual_revenue)}"
+puts "average revenue is #{Store.average(:annual_revenue)}"
+puts "numbers of stores with $1M #{Store.where('annual_revenue < ?', 100).count}"
